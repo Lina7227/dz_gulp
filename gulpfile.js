@@ -5,11 +5,13 @@ const cssnano = require('gulp-cssnano')
 const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync')
 
-function style() {
-    return gulp.src('./src/css/style.css')
-        .pipe(autoprefixer())
-        .pipe(gulp.dest('src/css/style.min.css'));
-}
+function (){
+    return  gulp.src('./src/css/style.css')
+    .pipe(autoprefixer({
+      browsers: ['last 4 versions']
+    }))
+    .pipe(gulp.dest('./src/css/style.min.css'));
+  }
 
 function wacht(){
     browserSync.init({
