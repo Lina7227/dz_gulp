@@ -5,23 +5,23 @@ const cssnano = require('gulp-cssnano')
 const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync')
 
-function (){
+function css(){
     return  gulp.src('./src/css/style.css')
     .pipe(autoprefixer({
       browsers: ['last 4 versions']
     }))
     .pipe(gulp.dest('./src/css/style.min.css'));
-  }
+}
 
-function wacht(){
+function watch(){
     browserSync.init({
         server:{
             baseDir:'./src',
             index: "/index.html"
         }
-    })
+    });
 }
 
-gulp.wacht('./src/index.html').on('change', browserSync.reload);
+gulp.watch('./src/index.html').on('change', browserSync.reload, gulp.series[watch, css]);
 
-exports.wacht = start;
+exports.watch = watch;
