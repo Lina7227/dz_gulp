@@ -4,7 +4,7 @@
   "description": "изучение gulp",
   "main": "index.html",
   "scripts": {
-    "wacht": "npm run start"
+    "watch": "npm run start"
   },
   "keywords": [
     "gulp_sass"
