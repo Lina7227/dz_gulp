@@ -7,11 +7,11 @@ const browserSync = require('browser-sync')
 const imagemin = require('gulp-imagemin')
 
 function img(){
-    gulp.src('./src/img')
+    gulp.src('./src/img/*.jpg')
         .pipe(imagemin([
             imagemin.mozjpeg({quality: 75, progressive: true}),
         ]))
-        .pipe(gulp.dest('./src/img/img_min'));
+        .pipe(gulp.dest('./src/img_min'));
 }
 
 function css(){
@@ -31,6 +31,7 @@ function watch(){
     });
 }
 
-gulp.watch('./src/index.html').on('change', browserSync.reload, gulp.series[watch, css, img]);
+gulp.watch('./src/index.html').on('change', browserSync.reload, gulp.series[watch, css]);
 
 exports.watch = watch;
+exports.small = img;
