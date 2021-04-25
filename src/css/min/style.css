@@ -1,0 +1,41 @@
+h1 {
+    font-size: 50px;
+    color: red;
+    text-align: center;
+}
+
+.blok {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
+}
+
+.image {
+    width: 30%;
+    height: 300px;
+    background-position: center;
+}
+
+.img_first {
+    background-image: url("../img/1.jpg");
+    width: 250px;
+    height: 200px;
+}
+
+.img_second {
+    background-image: url("../img/2.jpg");
+    width: 250px;
+    height: 200px;
+}
+
+.img_third {
+    background-image: url("../img/3.jpg");
+    width: 250px;
+    height: 200px;
+}
