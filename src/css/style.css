@@ -1,6 +1,6 @@
 h1 {
     font-size: 50px;
-    color: red;
+    color: green;
     text-align: center;
 }
 
@@ -18,18 +18,6 @@ h1 {
 
 .img_first {
     background-image: url("../img/1.jpg");
-    width: 250px;
-    height: 200px;
-}
-
-.img_second {
-    background-image: url("../img/2.jpg");
-    width: 250px;
-    height: 200px;
-}
-
-.img_third {
-    background-image: url("../img/3.jpg");
     width: 250px;
     height: 200px;
 }
