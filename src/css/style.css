@@ -1,23 +1,15 @@
 h1 {
-    font-size: 50px;
-    color: green;
-    text-align: center;
-}
+  font-size: 50px;
+  color: green;
+  text-align: center; }
 
 .blok {
-    display: flex;
-    justify-content:center;
-    align-items: center
-}
-
-.image {
-    width: 30%;
-    height: 300px;
-    background-position: center;
-}
-
-.img_first {
-    background-image: url("../img/1.jpg");
-    width: 250px;
-    height: 200px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .blok .image {
+    background-position: center; }
+    .blok .image .img_first {
+      background-image: url("../img/1.jpg");
+      width: 250px;
+      height: 200px; }

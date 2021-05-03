@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-// const sass = require("gulp-sass");
+const sass = require("gulp-sass");
 // const concat = require("gulp-concat");
 const cssnano = require("gulp-cssnano");
 const autoprefixer = require("gulp-autoprefixer");
@@ -14,6 +14,13 @@ function img() {
       .src("./src/img/*.jpg")
       .pipe(imagemin([imagemin.mozjpeg({ quality: 75, progressive: true })]))
       .pipe(gulp.dest("./src/img_min/"));
+}
+
+function style() {
+    return gulp.src('./src/sass/*.sass')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('src/css'))
+        .pipe(browserSync.stream())
 }
 
 function css() {
@@ -47,3 +54,4 @@ exports.default = function () {
     // Or a composed task
     // watch('./src/*.js', series(clean, javascript));
   };
+  gulp.watch("./src/sass/*.sass").on("change", gulp.series(style,browserSync.reload));
